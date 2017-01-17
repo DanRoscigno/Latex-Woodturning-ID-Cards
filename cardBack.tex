@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage}
+\usepackage[paperheight=10.01in,paperwidth=5.16in,top=91.5mm,heightrounded]{geometry}
+\usepackage{filecontents}
+\usepackage{csvtools}
+\usepackage{eso-pic}
+\usepackage{graphicx}
+\usepackage{fix-cm}
+\usepackage{transparent}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\pagestyle{empty}
+
+\setlength{\oddsidemargin}{-17.75mm}
+
+\AddToShipoutPicture{%
+   \setlength\unitlength{1mm}
+    \put(8.0000,73){\transparent{0.4}{\includegraphics[height=88.9mm,keepaspectratio=true]{shavings}}}
+    \put(68.325,73){\transparent{0.4}{\includegraphics[height=88.9mm,keepaspectratio=true]{shavings}}}
+    %\put(21.625,93){\includegraphics[height=50mm,keepaspectratio=true]{Klingspor}}
+    %\put(35.625,93){\includegraphics[height=50mm,keepaspectratio=true]{Woodcraft}}
+    %\put(68.325,73){\includegraphics[height=88.9mm,keepaspectratio=true]{shavings}}
+    %\put(82,93){\includegraphics[height=50mm,keepaspectratio=true]{Klingspor}}
+    %\put(96,93){\includegraphics[height=50mm,keepaspectratio=true]{Woodcraft}}
+}
+
+\begin{filecontents*}{names.csv}
+Name,Affiliation
+Present this ID for a discount at these participating Raleigh retailer locations:, http://woodturnersguild.com\\wgnc$@$ncturning.com\\Call/Txt: 919-697-8876
+Present this ID for a discount at these participating Raleigh retailer locations:, http://woodturnersguild.com\\wgnc$@$ncturning.com\\Call/Txt: 919-697-8876
+\end{filecontents*}
+
+\begin{document}
+\setlength\fboxrule{0pt}
+\applyCSVfile{names.csv}{%
+    \noindent
+        \fbox{\rotatebox{90}{\begin{minipage}[t][52mm]{85mm}
+            \vspace{12mm}
+            \centering
+            \begin{small}\bfseries{
+                \insertName
+            }\end{small}
+            \vfill
+            \begin{large}\bfseries{
+Klingspor\\
+%\vspace{5mm}
+Woodcraft\\
+            }\end{large}
+            \vfill
+            \begin{small}\bfseries{
+                \insertAffiliation
+            }\end{small}
+            \end{minipage}}
+	}
+	\hspace{3.25mm}
+}
+\end{document}
