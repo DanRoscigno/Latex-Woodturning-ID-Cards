@@ -24,17 +24,15 @@
 
 \AddToShipoutPicture{%
    \setlength\unitlength{1mm}
-    \put(8.0000,73){\includegraphics[height=88.9mm,keepaspectratio=true]{shavings}}
-    \put(43.000,90){\includegraphics[height=70.0mm,keepaspectratio=true]{wgnc_large_trans.png}}
-    \put(68.325,73){\includegraphics[height=88.9mm,keepaspectratio=true]{shavings}}
-    \put(103.325,90){\includegraphics[height=70.0mm,keepaspectratio=true]{wgnc_large_trans.png}}
+    \put(8.0000,73){\includegraphics[height=88.9mm,keepaspectratio=true]{background}}
+    \put(43.000,90){\includegraphics[height=70.0mm,keepaspectratio=true]{logo.png}}
+    \put(68.325,73){\includegraphics[height=88.9mm,keepaspectratio=true]{background}}
+    \put(103.325,90){\includegraphics[height=70.0mm,keepaspectratio=true]{logo.png}}
 }
 
 \begin{filecontents*}{names.csv}
 First,Last,Affiliation,Image
-Dan,Wall,Member,DanWall.JPG
-Andy,Kintz,Member,Andy_Kintz.JPG
-John,Zatti,Member,John_Zatti.JPG
+Dan,Roscigno,Member,Dan.jpg
 \end{filecontents*}
 \definecolor{dark-gray}{gray}{0.25}
 
@@ -48,7 +46,7 @@ John,Zatti,Member,John_Zatti.JPG
          \raisebox{-.5\height}{\includegraphics[width=\maxwidth{2.7cm},height=\maxheight{3.2cm},keepaspectratio]{\insertImage}}
          \parbox{5.6cm}{\centering \bfseries {\fontsize{30}{36}\selectfont \vspace{4mm} ~\\ \insertFirst\\ \insertLast\\} {\color{dark-gray}\insertAffiliation}}
          \vfill\hspace{2mm}
-         \parbox[t][20mm][c]{15mm}{\color{gray}Year 20 \\ \bfseries {\fontsize{36}{40}\selectfont 16}}
+         \parbox[t][20mm][c]{15mm}{\color{gray}Year 20 \\ \bfseries {\fontsize{36}{40}\selectfont 17}}
       \end{minipage}
    }}%ended fbox and rotatebox also
    \hspace{6.25mm}%space between cards
